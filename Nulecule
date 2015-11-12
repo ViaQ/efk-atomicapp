@@ -1,0 +1,16 @@
+---
+specversion: 0.0.2
+id: efk-atomicapp
+
+metadata:
+  name: EFK atomicapp
+  appversion: 0.0.1
+  description: Atomic app that implements EFK stack
+
+graph:
+  - name: bitscout-elasticsearch-app
+    source: docker://bitscout/elasticsearch-app
+  - name: bitscout-kibana-app
+    source: docker://bitscout/kibana-app
+  - name: bitscout-fluentd-app
+    source: docker://bitscout/fluentd-app
