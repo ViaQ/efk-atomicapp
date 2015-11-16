@@ -4,12 +4,14 @@ id: efk-atomicapp
 
 metadata:
   name: EFK atomicapp
-  appversion: 0.0.1
-  description: Atomic app that implements EFK stack
+  appversion: 0.0.2
+  description: Atomic app that implements EFK stack + QPID dispatch router
 
 graph:
   - name: bitscout-elasticsearch-app
     source: docker://bitscout/elasticsearch-app
+  - name: bitscout-qpid-router-app
+    source: docker://bitscout/qpid-router-app
   - name: bitscout-kibana-app
     source: docker://bitscout/kibana-app
   - name: bitscout-fluentd-app
