@@ -1,0 +1,9 @@
+[general]
+provider = docker
+[bitscout-elasticsearch]
+docker_user_flag = " "
+uid = " "
+docker_vol_flag = " "
+docker_vol_sep = " "
+hostdir = " "
+containerdir = " "
