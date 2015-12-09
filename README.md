@@ -1,15 +1,20 @@
 # efk-atomicapp
 E(lasticsearch)F(luentd)K(ibana) multi-container atomic application
 
-To run:
-0) You must first have the bitscout/elasticsearch-app, bitscout/fluentd-app,
-and bitscout/kibana-app atomic application images available.  If they are not
-in docker hub, then you will have to build them from bitscout source.
+The application consists of:
+* local collection agents e.g. rsyslog that send data to the application via a
+message queue
+* a message queue
+* one or more fluentd that act to aggregate the data coming in from the message
+queue and format the data in the BitScout JSON format used by Elasticsearch
+* an elasticsearch cluster
+* kibana for visualization
 
-1) mkdir bitscout-efk-app ; cp answers.conf bitscout-efk-app ; \
-   cd bitscout-efk-app
+This also includes, for end-to-end testing purposes, an rsyslog-collector
+container that can be used to simulate a local rsyslog collector sending data
+to the message queue, and a make_rfc5424.py script which can be used to
+simulate syslog messages into the rsyslog-collector.
 
-2) atomic run bitscout/efk-atomicapp
+Application Flow: <https://github.com/BitScoutOrg/efk-atomicapp/wiki/BitScout-Application-Flow>
 
-If you do a "docker ps" you should see the 3 containers for elasticsearch,
-fluentd, and kibana.
+To run with *atomic*: <https://github.com/BitScoutOrg/efk-atomicapp/wiki/How-to-run-the-application-with-atomic>
