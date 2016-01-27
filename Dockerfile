@@ -7,4 +7,4 @@ LABEL io.projectatomic.nulecule.providers="docker" \
       RUN="docker run --rm \${OPT1} --privileged -v `pwd`:/atomicapp -v /run:/run -v /:/host --net=host --name \${NAME} -e NAME=\${NAME} -e IMAGE=\${IMAGE} \${IMAGE} -v \${OPT2} run \${OPT3} \${IMAGE}"
 
 ADD /Nulecule /Dockerfile /application-entity/
-#ADD /artifacts /application-entity/artifacts
+ADD /artifacts /application-entity/artifacts
