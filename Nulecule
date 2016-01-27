@@ -8,13 +8,13 @@ metadata:
   description: Atomic app that implements EFK stack + QPID dispatch router
 
 graph:
-  - name: bitscout-elasticsearch-app
-    source: docker://bitscout/elasticsearch-app
-  - name: bitscout-qpid-router-app
-    source: docker://bitscout/qpid-router-app
-  - name: bitscout-kibana-app
-    source: docker://bitscout/kibana-app
-  - name: bitscout-fluentd-app
-    source: docker://bitscout/fluentd-app
-  - name: bitscout-rsyslog-collector-app
-    source: docker://bitscout/rsyslog-collector-app
+  - name: viaq-nulecule-elasticsearch
+    source: docker://viaq/nulecule-elasticsearch
+  - name: viaq-nulecule-qpid-router
+    source: docker://viaq/nulecule-qpid-router
+  - name: viaq-nulecule-kibana
+    source: docker://viaq/nulecule-kibana
+  - name: viaq-nulecule-fluentd
+    source: docker://viaq/nulecule-fluentd
+  - name: viaq-nulecule-rsyslog-collector
+    source: docker://viaq/nulecule-rsyslog-collector

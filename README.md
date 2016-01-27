@@ -1,12 +1,11 @@
 # efk-atomicapp
-E(lasticsearch)F(luentd)K(ibana) multi-container atomic application
+E(lasticsearch)F(luentd)K(ibana) + QPID router multi-container atomic application
 
 The application consists of:
-* local collection agents e.g. rsyslog that send data to the application via a
-message queue
+* local collection agents e.g. rsyslog-collector that send data to the application via a message queue
 * a message queue
 * one or more fluentd that act to aggregate the data coming in from the message
-queue and format the data in the BitScout JSON format used by Elasticsearch
+queue and store in elasticsearch
 * an elasticsearch cluster
 * kibana for visualization
 
