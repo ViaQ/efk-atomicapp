@@ -9,10 +9,11 @@ queue and store in elasticsearch
 * an elasticsearch cluster
 * kibana for visualization
 
-This also includes, for end-to-end testing purposes, an rsyslog-collector
-container that can be used to simulate a local rsyslog collector sending data
-to the message queue, and a make_rfc5424.py script which can be used to
-simulate syslog messages into the rsyslog-collector.
+The rsyslog-collector container can be used to simulate a local rsyslog
+collector sending data to the message queue.  The integration-tests
+<https://github.com/ViaQ/integration-tests> repository contains a script called
+make_rfc5424.py script which can be used to simulate syslog messages into the
+rsyslog-collector.
 
 Application Flow: <https://github.com/BitScoutOrg/efk-atomicapp/wiki/BitScout-Application-Flow>
 
