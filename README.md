@@ -15,6 +15,6 @@ collector sending data to the message queue.  The integration-tests
 make_rfc5424.py script which can be used to simulate syslog messages into the
 rsyslog-collector.
 
-Application Flow: <https://github.com/BitScoutOrg/efk-atomicapp/wiki/BitScout-Application-Flow>
+Application Flow: <https://github.com/ViaQ/efk-atomicapp/wiki/ViaQ-Application-Flow>
 
-To run with *atomic*: <https://github.com/BitScoutOrg/efk-atomicapp/wiki/How-to-run-the-application-with-atomic>
+To run with *atomic*: <https://github.com/ViaQ/efk-atomicapp/wiki/How-to-run-the-application-with-atomic>
